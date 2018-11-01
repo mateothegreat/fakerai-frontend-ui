@@ -18,6 +18,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 import {FooterComponent} from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
 
@@ -26,7 +27,8 @@ import {FooterComponent} from './footer/footer.component';
         AppComponent,
         FooterComponent,
         GeneratorComponent,
-        HeaderComponent
+        HeaderComponent,
+        HomeComponent
 
     ],
 

@@ -10,6 +10,18 @@
             flex: 1;
             align-items: center;
             
+            .title {
+                
+                font-size: 12px;
+                
+                &:first-line {
+                    
+                    font-size: 16px;
+                    
+                }
+                
+            }
+            
             i {
                 
                 margin-right: 10px;
@@ -20,9 +32,8 @@
         
         .right {
             
-            flex: 0 1 200px;
-            justify-content: end;
-            align-items: end;
+            flex: 0 1 100px;
+            justify-content: flex-end;
             
         }
         

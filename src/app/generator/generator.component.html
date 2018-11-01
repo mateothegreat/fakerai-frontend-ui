@@ -6,120 +6,123 @@
 
     </mat-card-title>
 
-    <mat-card-content>
+    <div class="content">
 
-        <div class="list">
+        <div class="content-wrapper">
 
-            <form [formGroup]="formGroup">
+            <div class="list">
 
-                <label>Category Fields:</label>
+                <form [formGroup]="formGroup">
 
-                <div class="select">
+                    <label>Category Fields:</label>
 
-                    <mat-select formControlName="category"
-                                placeholder="Select a category..">
+                    <div class="select">
 
-                        <mat-option *ngFor="let category of categoryNames"
-                                    [value]="category">
+                        <mat-select formControlName="category"
+                                    placeholder="Select a category..">
 
-                            {{ category | titlecase }}
+                            <mat-option *ngFor="let category of categoryNames"
+                                        [value]="category">
 
-                        </mat-option>
+                                {{ category | titlecase }}
 
-                    </mat-select>
+                            </mat-option>
 
-                </div>
-
-                <div class="wrapper">
-
-                    <ul>
-
-                        <li *ngFor="let child of categories[formGroup.controls.category.value].children">
-
-                            {{ formGroup.controls.category.value }}.{{ child }}
-
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </form>
-
-        </div>
-
-        <div class="left">
-
-            <form [formGroup]="formGroup">
-
-                <div class="top">
-
-                    <div class="url">
-
-                        curl -XPOST -H 'Content-type: application/json' https://api.faker.ai/pattern?n={{
-                        formGroup.controls.optionCount.value }}&unique={{ formGroup.controls.optionUnique.value }}
+                        </mat-select>
 
                     </div>
 
-                </div>
+                    <div class="wrapper">
 
-                <div class="input">
+                        <ul>
 
-                    <label style="margin-top: 10px; margin-bottom: 0">POST Body:</label>
+                            <li *ngFor="let child of categories[formGroup.controls.category.value].children">
 
-                    <mat-form-field style="width: 100%;">
+                                {{ formGroup.controls.category.value }}.{{ child }}
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div class="left">
+
+                <form [formGroup]="formGroup">
+
+                    <div class="top">
+
+                        <div class="url">
+
+                            curl -XPOST -H 'Content-type: application/json' https://api.faker.ai/pattern?n={{
+                            formGroup.controls.optionCount.value }}&unique={{ formGroup.controls.optionUnique.value }}
+
+                        </div>
+
+                    </div>
+
+                    <div class="input">
+
+                        <label style="margin-top: 10px; margin-bottom: 0">POST Body:</label>
+
+                        <mat-form-field style="width: 100%;">
 
                     <textarea matInput
                               style="height: 70px; border: 1px solid #3f3f3f;"
                               formControlName="input"></textarea>
 
+                        </mat-form-field>
+
+                    </div>
+
+                    <div class="outputs">
+
+                        <label style="margin-top: 0px; margin-bottom: 5px">Outputs:</label>
+
+                        <div style="font-size: 11px;">{{ outputs }}</div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div class="right">
+
+                <form [formGroup]="formGroup">
+
+                    <label>Number of results: <span>{{ formGroup.controls.optionCount.value }}</span></label>
+
+                    <mat-slider max="1000"
+                                min="1"
+                                thumbLabel
+                                formControlName="optionCount"
+                                tickInterval="5"
+                                formControlName="optionCount"></mat-slider>
+
+                    <mat-form-field style="width: 100px;">
+
+                        <mat-select formControlName="optionUnique"
+                                    placeholder="Only unique results?">
+
+                            <mat-option value="true">Yes</mat-option>
+                            <mat-option value="false">No</mat-option>
+
+                        </mat-select>
+
                     </mat-form-field>
 
-                </div>
+                </form>
 
-                <div class="outputs">
-
-                    <label style="margin-top: 0px; margin-bottom: 5px">Outputs:</label>
-
-                    <div style="font-size: 11px;">{{ outputs }}</div>
-
-                </div>
-
-            </form>
+            </div>
 
         </div>
 
-
-        <div class="right">
-
-            <form [formGroup]="formGroup">
-
-                <label>Number of results: <span>{{ formGroup.controls.optionCount.value }}</span></label>
-
-                <mat-slider max="1000"
-                            min="1"
-                            thumbLabel
-                            formControlName="optionCount"
-                            tickInterval="5"
-                            formControlName="optionCount"></mat-slider>
-
-                <mat-form-field style="width: 100px;">
-
-                    <mat-select formControlName="optionUnique"
-                                placeholder="Only unique results?">
-
-                        <mat-option value="true">Yes</mat-option>
-                        <mat-option value="false">No</mat-option>
-
-                    </mat-select>
-
-                </mat-form-field>
-
-            </form>
-
-        </div>
-
-    </mat-card-content>
+    </div>
 
     <mat-card-actions align="end">
 
