@@ -24,12 +24,7 @@
                         "tsConfig": "src/tsconfig.app.json",
                         "assets": [
                             "src/favicon.ico",
-                            "src/assets",
-                            {
-                                "glob": "**/*",
-                                "input": "./node_modules/monaco-editor/min/vs",
-                                "output": "libs/vs"
-                            }
+                            "src/assets"
                         ],
                         "styles": [
                             "src/styles.scss"

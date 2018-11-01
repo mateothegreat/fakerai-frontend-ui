@@ -95,6 +95,25 @@ export class GeneratorComponent implements OnInit {
 
             ]
 
+        },
+        company: {
+
+            label: 'Companies',
+            key: 'company',
+            children: [
+                'suffixes',
+                'companyName',
+                'catchPhrase',
+                'catchPhraseAdjective',
+                'catchPhraseDescriptor',
+                'catchPhraseNoun',
+                'bs',
+                'bsAdjective',
+                'bsBuss',
+                'bsNoun',
+
+            ]
+
         }
 
     };
@@ -116,14 +135,6 @@ export class GeneratorComponent implements OnInit {
             console.log(results);
 
             this.outputs = JSON.stringify(results, null, 4);
-
-            this.editor.open({
-
-                uri: 'outputs.json',
-                language: 'json',
-                content: JSON.stringify(results, null, 4)
-
-            });
 
         });
 

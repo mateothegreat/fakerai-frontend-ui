@@ -56,7 +56,8 @@
 
                     <div class="url">
 
-                        curl -XPOST -H 'Content-type: application/json' https://api.faker.ai/pattern?n=10&unique=true
+                        curl -XPOST -H 'Content-type: application/json' https://api.faker.ai/pattern?n={{
+                        formGroup.controls.optionCount.value }}&unique={{ formGroup.controls.optionUnique.value }}
 
                     </div>
 
@@ -80,8 +81,9 @@
 
                     <label style="margin-top: 0px; margin-bottom: 5px">Outputs:</label>
 
-                    <monaco-editor theme="vs-dark"
-                                   [options]="monacoOptions"></monaco-editor>
+                    <div style="font-size: 11px;">{{ outputs }}</div>
+                    <!--<monaco-editor theme="vs-dark"-->
+                    <!--[options]="monacoOptions"></monaco-editor>-->
 
 
                 </div>
