@@ -18,12 +18,14 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 import {MonacoEditorModule} from 'ngx-monaco';
+import {FooterComponent} from './footer/footer.component';
 
 @NgModule({
 
     declarations: [
 
         AppComponent,
+        FooterComponent,
         GeneratorComponent,
         HeaderComponent
 
