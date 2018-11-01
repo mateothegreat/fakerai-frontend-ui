@@ -114,6 +114,194 @@ export class GeneratorComponent implements OnInit {
 
             ]
 
+        },
+        database: {
+
+            label: 'Databases',
+            key: 'database',
+            children: [
+                'columns',
+                'type',
+                'collation',
+                'engine'
+            ]
+
+        },
+        date: {
+
+            label: 'Dates',
+            key: 'date',
+            children: [
+                'past',
+                'future',
+                'recent'
+            ]
+
+        },
+        finance: {
+
+            label: 'Finance',
+            key: 'finance',
+            children: [
+                'account',
+                'accountName',
+                'mask',
+                'amount',
+                'transactionType',
+                'currencyCode',
+                'currencyName',
+                'currencySymbol',
+                'bitcoinAddress',
+                'ethereumAddress',
+                'iban',
+                'bic'
+            ]
+
+        },
+        hacker: {
+
+            label: 'Hacker Terms',
+            key: 'hacker',
+            children: [
+                'abbreviation',
+                'adjective',
+                'noun',
+                'verb',
+                'ingverb',
+                'phrase'
+            ]
+
+        },
+        image: {
+
+            label: 'Images',
+            key: 'image',
+            children: [
+                'image',
+                'avatar',
+                'imageUrl',
+                'abstract',
+                'animals',
+                'business',
+                'cats',
+                'city',
+                'food',
+                'nightlife',
+                'fashion',
+                'people',
+                'nature',
+                'sports',
+                'technics',
+                'transport',
+                'dataUri'
+            ]
+
+        },
+        internet: {
+
+            label: 'Internet',
+            key: 'internet',
+            children: [
+                'avatar',
+                'email',
+                'exampleEmail',
+                'userName',
+                'protocol',
+                'url',
+                'domainName',
+                'domainSuffix',
+                'domainWord',
+                'ip',
+                'ipv6',
+                'userAgent',
+                'color',
+                'mac',
+                'password'
+            ]
+
+        },
+        lorem: {
+
+            label: 'Lorem Ipsum',
+            key: 'lorem',
+            children: [
+                'word',
+                'words',
+                'sentence',
+                'sentences',
+                'slug',
+                'paragraph',
+                'paragraphs',
+                'text',
+                'lines'
+            ]
+
+        },
+        name: {
+
+            label: 'Names',
+            key: 'name',
+            children: [
+                'firstName',
+                'lastName',
+                'findName',
+                'jobTitle',
+                'prefix',
+                'suffix',
+                'title',
+                'jobDescriptor',
+                'jobArea',
+                'jobType'
+            ]
+
+        },
+        phone: {
+
+            label: 'Phone Numbers',
+            key: 'phone',
+            children: [
+                'phoneNumber',
+                'phoneNumberFormat',
+                'phoneFormats'
+            ]
+
+        },
+        random: {
+
+            label: 'Random Data',
+            key: 'random',
+            children: [
+                'alphaNumeric',
+                'arrayElement',
+                'boolean',
+                'float',
+                'hexaDecimal',
+                'image',
+                'locale',
+                'number',
+                'objectElement',
+                'uuid',
+                'word'
+            ]
+
+        },
+        system: {
+
+            label: 'Systems',
+            key: 'system',
+            children: [
+                'fileName',
+                'commonFileName',
+                'mimeType',
+                'commonFileType',
+                'commonFileExt',
+                'fileType',
+                'fileExt',
+                'directoryPath',
+                'filePath',
+                'semver'
+            ]
+
         }
 
     };

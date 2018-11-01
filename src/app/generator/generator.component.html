@@ -22,7 +22,7 @@
                         <mat-option *ngFor="let category of categoryNames"
                                     [value]="category">
 
-                            {{ category }}
+                            {{ category | titlecase }}
 
                         </mat-option>
 
@@ -82,9 +82,6 @@
                     <label style="margin-top: 0px; margin-bottom: 5px">Outputs:</label>
 
                     <div style="font-size: 11px;">{{ outputs }}</div>
-                    <!--<monaco-editor theme="vs-dark"-->
-                    <!--[options]="monacoOptions"></monaco-editor>-->
-
 
                 </div>
 
@@ -127,6 +124,7 @@
     <mat-card-actions align="end">
 
         <button mat-raised-button
+                color="primary"
                 [disabled]="!formGroup.valid"
                 (click)="generateClick()">Generate!
         </button>
