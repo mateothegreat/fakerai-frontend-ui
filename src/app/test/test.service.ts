@@ -1,13 +1,4 @@
-import {Component, OnInit} from '@angular/core';
-
-@Component({
-    selector: 'app-home',
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss']
-})
-export class HomeComponent implements OnInit {
-
-    public code: string = `import {Injectable} from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 
@@ -35,15 +26,6 @@ export class TestService {
 
         return this.httpClient.post('https://api.faker.ai/pattern?n=100&unique=true', ['{{company.companyName}}']);
 
-    }
-
-}
-`;
-
-    constructor() {
-    }
-
-    ngOnInit() {
     }
 
 }

@@ -18,7 +18,9 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 import {FooterComponent} from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
+import {HomeComponent} from './home/home.component';
+import {PrismModule} from '@ngx-prism/core';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
 
@@ -28,7 +30,8 @@ import { HomeComponent } from './home/home.component';
         FooterComponent,
         GeneratorComponent,
         HeaderComponent,
-        HomeComponent
+        HomeComponent,
+        TestComponent
 
     ],
 
@@ -47,6 +50,8 @@ import { HomeComponent } from './home/home.component';
         MatSelectModule,
         MatSliderModule,
         MatToolbarModule,
+
+        PrismModule,
 
     ],
 
