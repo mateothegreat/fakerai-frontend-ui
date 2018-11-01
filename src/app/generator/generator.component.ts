@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {GeneratorService} from './generator.service';
+import {MonacoEditorDirective} from 'ngx-monaco';
 
 @Component({
     selector: 'app-generator',
@@ -8,6 +9,8 @@ import {GeneratorService} from './generator.service';
     styleUrls: ['./generator.component.scss']
 })
 export class GeneratorComponent implements OnInit {
+
+    @ViewChild(MonacoEditorDirective) editor: MonacoEditorDirective;
 
     public outputs: string = '';
 
@@ -23,6 +26,19 @@ export class GeneratorComponent implements OnInit {
         optionUnique: new FormControl('true')
 
     });
+
+    public readonly monacoOptions = {
+
+        quickSuggestions: true,
+        lineNumbers: true,
+        cursorBlinking: 'phase',
+        scrollBeyondLastLine: false,
+        autoIndent: true,
+        formatOnType: true,
+        formatOnPaste: true,
+        codeLens: true,
+
+    };
 
     public categories: {
 
@@ -100,6 +116,14 @@ export class GeneratorComponent implements OnInit {
             console.log(results);
 
             this.outputs = JSON.stringify(results, null, 4);
+
+            this.editor.open({
+
+                uri: 'outputs.json',
+                language: 'json',
+                content: JSON.stringify(results, null, 4)
+
+            });
 
         });
 

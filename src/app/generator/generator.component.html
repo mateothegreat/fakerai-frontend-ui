@@ -64,6 +64,8 @@
 
                 <div class="input">
 
+                    <label style="margin-top: 10px; margin-bottom: 0">POST Body:</label>
+
                     <mat-form-field style="width: 100%;">
 
                     <textarea matInput
@@ -76,7 +78,11 @@
 
                 <div class="outputs">
 
-                    {{ outputs }}
+                    <label style="margin-top: 0px; margin-bottom: 5px">Outputs:</label>
+
+                    <monaco-editor theme="vs-dark"
+                                   [options]="monacoOptions"></monaco-editor>
+
 
                 </div>
 

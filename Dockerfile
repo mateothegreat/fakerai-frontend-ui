@@ -1,13 +1,14 @@
-FROM node:10-alpine
+FROM node:alpine AS builder
 
 WORKDIR /app
 
-RUN chown -R node /app
-
-USER node
-
-COPY . .
-
+COPY package.json .
 RUN npm install
 
-ENTRYPOINT ["node", "server.js"]
+COPY . .
+RUN npm run build
+
+FROM nginx:alpine
+
+COPY --from=builder /app/dist/fakerai-frontend-ui/* /usr/share/nginx/html/
+COPY nginx.conf /etc/nginx/conf.d/default.conf

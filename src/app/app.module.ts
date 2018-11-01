@@ -17,6 +17,7 @@ import {GeneratorComponent} from './generator/generator.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
+import {MonacoEditorModule} from 'ngx-monaco';
 
 @NgModule({
 
@@ -43,6 +44,8 @@ import {HttpClientModule} from '@angular/common/http';
         MatSelectModule,
         MatSliderModule,
         MatToolbarModule,
+
+        MonacoEditorModule.forRoot(),
 
     ],
 
