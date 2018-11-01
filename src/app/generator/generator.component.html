@@ -1,0 +1,128 @@
+<mat-card>
+
+    <mat-card-title>
+
+        faker.ai generator
+
+    </mat-card-title>
+
+    <mat-card-content>
+
+        <div class="list">
+
+            <form [formGroup]="formGroup">
+
+                <label>Category Fields:</label>
+
+                <div class="select">
+
+                    <mat-select formControlName="category"
+                                placeholder="Select a category..">
+
+                        <mat-option *ngFor="let category of categoryNames"
+                                    [value]="category">
+
+                            {{ category }}
+
+                        </mat-option>
+
+                    </mat-select>
+
+                </div>
+
+                <div class="wrapper">
+
+                    <ul>
+
+                        <li *ngFor="let child of categories[formGroup.controls.category.value].children">
+
+                            {{ formGroup.controls.category.value }}.{{ child }}
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <div class="left">
+
+            <form [formGroup]="formGroup">
+
+                <div class="top">
+
+                    <div class="url">
+
+                        curl -XPOST -H 'Content-type: application/json' https://api.faker.ai/pattern?n=10&unique=true
+
+                    </div>
+
+                </div>
+
+                <div class="input">
+
+                    <mat-form-field style="width: 100%;">
+
+                    <textarea matInput
+                              style="height: 70px; border: 1px solid #3f3f3f;"
+                              formControlName="input"></textarea>
+
+                    </mat-form-field>
+
+                </div>
+
+                <div class="outputs">
+
+                    {{ outputs }}
+
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <div class="right">
+
+            <form [formGroup]="formGroup">
+
+                <label>Number of results: <span>{{ formGroup.controls.optionCount.value }}</span></label>
+
+                <mat-slider max="1000"
+                            min="1"
+                            thumbLabel
+                            formControlName="optionCount"
+                            tickInterval="5"
+                            formControlName="optionCount"></mat-slider>
+
+                <mat-form-field style="width: 100px;">
+
+                    <mat-select formControlName="optionUnique"
+                                placeholder="Only unique results?">
+
+                        <mat-option value="true">Yes</mat-option>
+                        <mat-option value="false">No</mat-option>
+
+                    </mat-select>
+
+                </mat-form-field>
+
+            </form>
+
+        </div>
+
+    </mat-card-content>
+
+    <mat-card-actions align="end">
+
+        <button mat-raised-button
+                [disabled]="!formGroup.valid"
+                (click)="generateClick()">Generate!
+        </button>
+
+    </mat-card-actions>
+
+</mat-card>

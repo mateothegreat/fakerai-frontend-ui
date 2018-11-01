@@ -1,0 +1,31 @@
+:host {
+    
+    mat-toolbar {
+        
+        display: flex;
+        
+        .left {
+            
+            display: flex;
+            flex: 1;
+            align-items: center;
+            
+            i {
+                
+                margin-right: 10px;
+                
+            }
+            
+        }
+        
+        .right {
+            
+            flex: 0 1 200px;
+            justify-content: end;
+            align-items: end;
+            
+        }
+        
+    }
+    
+}
