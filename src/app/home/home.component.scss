@@ -8,18 +8,17 @@
         
         display: flex;
         
-        a {
-            
-            color: mediumpurple;
-            
-        }
-        
         .left {
-        
+            
+            flex: 1;
+            padding-right: 20px;
         }
         
         .right {
-        
+            
+            width: 500px;
+            flex: 0 1 500px;
+            
         }
         
     }

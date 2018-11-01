@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-home',
@@ -38,6 +38,32 @@ export class TestService {
     }
 
 }
+`;
+
+    public json: string = `{
+    "status": true,
+    "data": {
+        "name": "Cecile Lemke III",
+        "username": "Georgette.Ebert",
+        "email": "Michael38@gmail.com",
+        "address": {
+            "street": "Marina Trace",
+            "suite": "Apt. 089",
+            "city": "North Douglasville",
+            "zipcode": "40725-7712",
+            "geo": {
+                "lat": "-72.2600",
+                "lng": "36.7209"
+            }
+        },
+        "phone": "1-599-600-4740 x7695",
+        "website": "fredrick.org",
+        "company": {
+            "name": "Pfeffer Inc",
+            "catchPhrase": "Decentralized systematic extranet",
+            "bs": "transparent strategize users"
+        }
+    }
 `;
 
     constructor() {

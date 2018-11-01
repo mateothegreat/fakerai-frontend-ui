@@ -10,14 +10,17 @@ body {
     font-size: 12px;
     
     background: linear-gradient(90deg, #29262a 0%, #131313 100%);
+    //background: #1D0A56;
+}
+
+a {
+    
+    color: mediumpurple;
     
 }
 
-monaco-editor {
+h1 {
     
-    height: 100%;
-    width: 100%;
-    display: block;
+    font-size: 17px;
     
 }
-
