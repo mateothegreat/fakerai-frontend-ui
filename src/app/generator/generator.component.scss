@@ -1,97 +1,101 @@
 :host {
     
-    position: absolute;
-    bottom: 0;
-    left: 100px;
-    right: 100px;
-    
-    height: 700px;
-    
     background: #1f1f1f;
     
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
     
-    label {
+    mat-card {
         
-        display: block;
-        font-size: 10px;
-        color: #e1e1e1;
-        margin-bottom: 10px;
-        
-    }
-    
-    mat-card-content {
-        
+        height: 100%;
         display: flex;
-        background: #2f2f2f;
-        height: 580px;
+        flex-direction: column;
         
-        .left {
+        label {
+            
+            display: block;
+            font-size: 10px;
+            color: #e1e1e1;
+            margin-bottom: 10px;
+            
+        }
+        
+        mat-card-title {
+            
+            flex: 0 1 50px;
+            
+        }
+        mat-card-content {
             
             flex: 1;
+            display: flex;
+            background: #2f2f2f;
             
-            border-right: 1px solid #3f3f3f;
-            
-            padding: 5px;
-            
-            .top {
+            .left {
                 
-                padding: 2px;
-                border: 1px solid #3f3f3f;
-                background: #2f2f2f;
+                flex: 1;
                 
-                .url {
+                border-right: 1px solid #3f3f3f;
+                
+                padding: 5px;
+                
+                .top {
                     
-                    color: greenyellow;
+                    padding: 2px;
+                    border: 1px solid #3f3f3f;
+                    background: #2f2f2f;
+                    
+                    .url {
+                        
+                        color: greenyellow;
+                        
+                    }
+                    
+                }
+                
+                .input {
+                
+                }
+                
+                .outputs {
+                    
+                    height: 100%;
+                    overflow: auto;
                     
                 }
                 
             }
             
-            .input {
-            
-            }
-            
-            .outputs {
+            .list {
                 
-                height: 400px;
-                overflow: auto;
+                flex: 0 1 200px;
+                border-right: 1px solid #3f3f3f;
                 
-            }
-            
-        }
-        
-        .list {
-            
-            flex: 0 1 200px;
-            border-right: 1px solid #3f3f3f;
-            
-            padding: 5px;
-            
-            .select {
-                
-                border-bottom: 1px solid #3f3f3f;
-                padding-bottom: 10px;
-                
-            }
-            .wrapper {
-                
-                height: 300px;
-                
-                overflow: auto;
-                
-                ul {
+                .select {
                     
-                    list-style-type: square;
-                    padding: 20px;
-                    margin: 0;
+                    border-bottom: 1px solid #3f3f3f;
+                    padding-bottom: 10px;
                     
-                    li {
+                }
+                .wrapper {
+                    
+                    height: 100%;
+                    
+                    overflow: auto;
+                    
+                    ul {
                         
-                        font-size: 10px;
-                        margin: 2px;
+                        list-style-type: square;
+                        padding: 20px;
+                        margin: 0;
+                        
+                        li {
+                            
+                            font-size: 10px;
+                            margin: 2px;
+                            
+                        }
                         
                     }
                     
@@ -99,13 +103,19 @@
                 
             }
             
+            .right {
+                
+                flex: 0 1 70px;
+                
+                padding: 10px;
+                
+            }
+            
         }
         
-        .right {
+        mat-card-actions {
             
-            flex: 0 1 70px;
-            
-            padding: 10px;
+            flex: 0 1 30px;
             
         }
         
