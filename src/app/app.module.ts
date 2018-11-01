@@ -20,7 +20,6 @@ import {HttpClientModule} from '@angular/common/http';
 import {FooterComponent} from './footer/footer.component';
 import {HomeComponent} from './home/home.component';
 import {PrismModule} from '@ngx-prism/core';
-import { TestComponent } from './test/test.component';
 
 @NgModule({
 
@@ -31,7 +30,6 @@ import { TestComponent } from './test/test.component';
         GeneratorComponent,
         HeaderComponent,
         HomeComponent,
-        TestComponent
 
     ],
 
